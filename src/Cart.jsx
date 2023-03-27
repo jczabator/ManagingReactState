@@ -56,6 +56,14 @@ export default function Cart({ cart, updateQuantity }) {
             } in my cart`}{" "}
       </h1>
       <ul>{cart.map(renderItem)}</ul>
+      {cart.length > 0 && (
+        <button
+          className="btn btn-primary"
+          onClick={() => navigate("/checkout")}
+        >
+          Checkout
+        </button>
+      )}
     </section>
   );
 }
